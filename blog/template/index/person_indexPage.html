@@ -1,0 +1,109 @@
+{include file="index/header.html"}
+<link rel="stylesheet" href="{CSS_PATH}person_indexPage.css">
+<style>
+    .content_box{
+        margin-top: 57px;
+    }
+</style>
+<section class="content_box">
+    <div class="content_left">
+        <!--个人-->
+        <div class="person_message">
+            <div class="touxiang"><img src="{$photo[0]['photo']}" alt=""></div>
+            <ul class="zj">
+                <li class="nichen" style="font-size:21px;">{$photo[0]['nichen']}</li>
+                <li>
+                    <div class="guanzhu">
+                        <span>0</span>
+                        <a href="">关注></a>
+                    </div>
+                    <div class="fenshi">
+                        <span>0</span>
+                        <a href="">粉丝></a>
+                    </div>
+                    <div class="artic">
+                        <span>0</span>
+                        <a href="">文章></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!---->
+        <ul class="tarbar_menu">
+            <li class="arc">
+                <a href=""><span class="glyphicon glyphicon-duplicate"></span>&nbsp;&nbsp;文章</a>
+            </li>
+            <li class="act">
+                <a href=""><span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;动态</a>
+            </li>
+            <li class="comment">
+                <a href=""><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;最新评论</a>
+            </li>
+        </ul>
+        <ul class="content_list">
+            {foreach $res as $item}
+            <li>
+                <div class="author">
+                    <a href=""><img src="{$photo[0]['photo']}" alt="" style="width:32px;height:32px;border-radius: 50%"></a>
+                    <a href="" class="nicheng">{$photo[0]['nichen']}</a>
+                    <span>发表了文章&nbsp;&nbsp;{$item['time']}</span>
+                </div>
+                <a href="index.php?d=index&f=person&a=showArtic&msid={$item['msid']}" class="arc_title" style="color:#333;">{$item['title']}</a>
+                <p class="abstrct"></p>
+                <input type="hidden" value="{$item['content']}" class="Math.random()">
+                <div class="mate">
+                    <a href="" class="glyphicon glyphicon-eye-open"><span class="number">0</span></a>
+                    <a href="" class="glyphicon glyphicon-envelope"><sapn class="number">0</sapn></a>
+                    <span class="glyphicon glyphicon-heart"><sapn class="number">0</sapn></span>
+                </div>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+    <div class="content_right">
+        <form action="" method="" class="form_user">
+            <ul class="person_des">
+                <li>
+                    <div class="transtion">个人介绍</div>
+                   <div class="edit glyphicon glyphicon-pencil">编辑</div>
+                </li>
+                <li>
+                    <div class="edit_box">
+                        <div class="desc_box"></div>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div class="new_notebook_form">
+                            <input type="submit" class="class_submit">
+                            <div class="cancel">取消</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </form>
+    </div>
+</section>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.content_list li').each(function(index,val){
+            var content=$(this).children('input[type=hidden]').val();
+            var slice=content.substr(0,90)+' ....';
+            $(this).children('p.abstrct').text(slice);
+        })
+
+       $('.edit').click(function(){
+           $('.edit_box').show();
+           $('.person_des li:nth-child(2)').css('paddingBottom','70px');
+       })
+        $('.cancel').click(function(){
+            $('.edit_box').hide();
+            $('.person_des li:nth-child(2)').css('paddingBottom','40px');
+
+        })
+
+
+    })
+</script>

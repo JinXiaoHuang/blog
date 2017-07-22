@@ -1,0 +1,228 @@
+body{
+    width:100%;
+     overflow: hidden;
+}
+.admin{
+    width:1084px;
+    height:100%;
+    background: #fff;
+     overflow: hidden;
+}
+.title{
+    width:100%;
+    height:50px;
+    background: -webkit-gradient(linear, left bottom,
+    left top, color-stop(0, #e6e6e6), color-stop(1, #ffffff));
+}
+.title h3{
+    height:100%;
+    line-height: 50px!important;
+    margin: 0;
+    padding-left:20px!important;
+}
+.nav{
+    height:38px;
+    width:1084px;
+    background-clip: padding-box;
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid red;
+    border-left: 1px solid #fff;
+    box-sizing: border-box;
+    margin-bottom: .5em;
+    margin: 0;
+}
+.nav ul{
+    margin: 0;
+    margin-left: 20px;
+    height:38px;
+    padding-left:0;
+
+}
+.nav li{
+    list-style: none!important;
+    width:auto;
+    height:38px;
+    float:left;
+    color:#999999;
+    line-height: 38px;
+    font-size:13px;
+    list-style: none;
+}
+.nav ul li:first-child{
+    color:#0088D5;
+}
+.fg{
+    width:30px!important;
+    text-align: center;
+}
+.list_box{
+    background: #fff;
+    width:1004px;
+    height:412px;
+
+    padding:0px 20px 0 20px;
+    margin: 0!important;
+}
+.well{
+    width:1034px;
+    height:370px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 0px #ffffff;
+    -moz-box-shadow: 1px 1px 0px #ffffff;
+    box-shadow: 1px 1px 0px #ffffff;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; padding:20px 20px 40px 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.well th,.well td{
+    width:12%;
+    text-align: center;
+    border-bottom:1px solid #ddd!important;
+    padding:0;
+    padding-top:8px;
+    padding-bottom:8px;
+    color:#333;
+}
+.well table,.well table tr{
+    width:100%;
+}
+.well td{
+    font-size:12px;
+}
+.well table tr{
+    border-bottom:1px solid #ddd!important;
+}
+.well table tr th:last-child{
+    border:0;
+}
+.btn_toolbar{
+    height:30px!important;
+    width:1068px;
+
+    margin: 10px 0 10px 0;
+}
+.btn_toolbar .save{
+    background-color: #113355;
+    background-image: linear-gradient(to bottom, #446688, #113355);
+    width:106px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    color:#fff;
+    font-size:14px;
+    float:left;
+    border:0;
+}
+.btn_toolbar .del{
+    background-color: #113355;
+    background-image: linear-gradient(to bottom, #446688, #113355);
+    width:106px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    color:#fff;
+    font-size:14px;
+    float:left;
+    margin-left: 10px;
+    border:0;
+}
+td a{
+    color:#1788CC;
+    text-decoration: none;
+    font-size:13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav_tabs{
+    width:100%;
+    height:38px;
+    border-bottom: 1px solid #ddd;
+    padding:0;
+    margin: 0;
+}
+.nav_tabs li{
+    float:left;
+    margin-left: 10px;
+    text-align: center;
+    width:70px;
+    height:38px;
+    line-height: 38px;
+    font-size:14px;
+    color:#0088CC;
+    cursor: pointer;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+.active{
+    border:1px #ddd solid;
+    border-bottom:0 ;
+    color:#555A5F!important;
+    box-sizing: border-box!important;
+    cursor: none;
+}
+.active2{
+    display: none;
+}
+.nav_tabs li:hover{
+    background: #E8E8E8;
+}
+.nav_tabs li.active:hover{
+    background: #fff;
+}
+.base_mess{
+    padding:0;
+}
+.base_mess li label,.pass li label{
+    color:#555A5F;
+    margin-right: 5px;
+}
+.base_mess li:first-child{
+    margin-top: 10px;
+}
+.base_mess li{
+    border:0;
+    list-style: none;
+    margin-top: 10px;
+    transition: border linear .2s, box-shadow linear .2s;
+}
+.base_mess li input{
+    border:1px solid #ddd;
+    height:23px;
+    width:250px;
+    margin-top: 10px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+.base_mess li select{
+    height:23px;
+    border:1px solid #ddd;
+}
+.pass{
+    padding:0;
+}
+.pass li{
+
+    list-style: none;
+}
+.pass li input{
+    margin-top: 10px;
+    height:23px;
+    width:250px;
+    border:1px solid #ddd;
+}
+.pass li input[type='submit']{
+    margin-top: 30px;
+    height:30px;
+    width:80px;
+    background-color: #113355;
+    background-image: linear-gradient(to bottom, #446688, #113355);
+    color:#fff;
+}

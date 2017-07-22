@@ -1,0 +1,73 @@
+<html style="overflow: hidden">
+<head>
+    <title>修改个人信息</title>
+    <link rel="stylesheet" type="text/css" href="{FONTS_PATH}font3/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}right.css">
+    <script type="text/javascript" src="{JS_PATH}jquery.js" ></script>
+    <style>
+        .base_mess li{
+            display: block;
+        }
+    </style>
+</head>
+<body style="width:100%;overflow: hidden">
+<section class="admin">
+    <div class="title">
+        <h3 style="height:100%;line-height:65px; padding-left:20px;">管理员信息管理</h3>
+    </div>
+    <div class="nav" style=" border-top: 1px solid #ccc;">
+        <ul>
+            <li>首页</li>
+            <li class="fg">/</li>
+            <li>管理员添加</li>
+        </ul>
+    </div>
+    <div class="list_box">
+        <form action="index.php?d=admin&f=category&a=addCon" method="post">
+            <section class="btn_toolbar">
+                <button type="submit" class="btn save">
+                    确认添加
+                </button>
+                <!--                <button type="submit" class="del">-->
+                <!--                    删除信息-->
+                <!--                </button>-->
+            </section>
+            <section class="well">
+                <!--                <ul class='nav_tabs'>-->
+                <!--                    <li class="active">基本信息</li>-->
+                <!--                    <li>密码</li>-->
+                <!--                </ul>-->
+                <ul class="base_mess com">
+                    <li>所属分类</li>
+                    <li>
+                        <select name="pid" id="" class="form-control">
+                            <option value="0">
+                                --一级分类--
+                            </option>
+                            {$str}
+                        </select>
+                    </li>
+                    <li>
+                        <label>分类名称：</label><br>
+                        <input type="text" id="" name="cname" value="" />
+                    </li>
+
+                </ul>
+            </section>
+        </form>
+    </div>
+</section>
+</body>
+</html>
+<script>
+    $('.nav_tabs li').click(function(){
+        $('.nav_tabs li').each(function(index,value){
+            $('.com').eq(index).addClass('active2');
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+        console.log($(this).index());
+        $('.com').eq($(this).index()).removeClass('active2');
+    })
+
+</script>
